@@ -16,7 +16,7 @@ MenuWrapper.LeftSide = styled.div`
 	order: 1;
 `
 
-MenuWrapper.CentralSide = styled.div`
+MenuWrapper.CentralSide = styled.ul`
 	padding: 0;
 	margin: 0;
 	order: 3;
