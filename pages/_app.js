@@ -25,11 +25,11 @@ export default function App({ Component, pageProps }) {
 }
 
 App.propTypes = {
-  Component: PropTypes.element,
-  pageProps: PropTypes.element,
+  Component: PropTypes.func,
+  pageProps: PropTypes.objectOf(PropTypes.object),
 };
 
 App.defaultProps = {
-  Component: PropTypes.element,
-  pageProps: PropTypes.element,
+  Component: PropTypes.func,
+  pageProps: PropTypes.any,
 };
