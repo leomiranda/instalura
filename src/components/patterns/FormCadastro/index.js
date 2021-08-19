@@ -103,9 +103,9 @@ export default function FormCadastro({ propsDoModal }) {
   );
 }
 
-// FormCadastro.propTypes = {
-//   propsModal: PropTypes.array,
-// };
-// FormCadastro.defaultProps = {
-//   propsModal: '',
-// };
+FormCadastro.propTypes = {
+  propsDoModal: PropTypes.node,
+};
+FormCadastro.defaultProps = {
+  propsDoModal: '',
+};
