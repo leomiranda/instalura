@@ -30,6 +30,6 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  Component: PropTypes.func,
-  pageProps: PropTypes.any,
+  Component: '',
+  pageProps: '',
 };
