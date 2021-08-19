@@ -62,13 +62,11 @@ function FormContent() {
 
             throw new Error('Não foi possível cadastrar o usuário :(');
           })
-          .then((resObj) => {
+          .then(() => {
             setSubmissionStatus(formStates.DONE);
-            console.log(resObj);
           })
-          .catch((err) => {
+          .catch(() => {
             setSubmissionStatus(formStates.ERROR);
-            console.error(err);
           });
       }}
     >

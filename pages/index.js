@@ -78,7 +78,6 @@ export default function Home() {
                 }}
                 display='block'
                 onClick={() => {
-                  console.log('isModalOpen', isModalOpen);
                   setModalState(!isModalOpen);
                 }}
               >
