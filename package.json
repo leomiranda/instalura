@@ -17,9 +17,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "shelljs": "^0.8.4",
     "styled-components": "^5.2.3",
-    "styled-normalize": "^8.0.7",
-    "shelljs": "^0.8.4"
+    "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -33,10 +33,11 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
     "prettier": "^2.3.2"
   },
   "husky": {
-    "hooks": { 
+    "hooks": {
       "pre-push": "yarn lint"
     }
   },
