@@ -35,5 +35,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2"
   },
+  "husky": {
+    "hooks": { 
+      "pre-push": "yarn lint"
+    }
+  },
   "license": "MIT"
 }
