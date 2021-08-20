@@ -6,7 +6,8 @@
     "export": "next build && next export",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
-    "custom-script": "node ./script-test.js"
+    "custom-script": "node ./script-test.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
@@ -35,11 +36,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.1",
     "prettier": "^2.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn lint"
-    }
   },
   "license": "MIT"
 }
