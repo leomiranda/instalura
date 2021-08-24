@@ -178,8 +178,8 @@ export default function FormCadastro({ propsDoModal }) {
 }
 
 FormCadastro.propTypes = {
-  propsDoModal: PropTypes.node,
+  propsDoModal: PropTypes.objectOf(Boolean),
 };
 FormCadastro.defaultProps = {
-  propsDoModal: '',
+  propsDoModal: {},
 };
