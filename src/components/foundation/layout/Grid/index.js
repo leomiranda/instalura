@@ -123,6 +123,7 @@ const Col = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
   ${propToStyle('marginBottom')}
+  ${propToStyle('order')}
 `;
 
 Col.defaultProps = {
@@ -139,9 +140,12 @@ export const Grid = {
     margin-left: -16px;
 
     ${propToStyle('flex')}
+    ${propToStyle('marginTop')}
     ${propToStyle('marginLeft')}
     ${propToStyle('marginRight')}
     ${propToStyle('justifyContent')}
+    ${propToStyle('marginBottom')}
+    ${propToStyle('flexDirection')}
   `,
   Col,
 };
