@@ -26,4 +26,12 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: 'src',
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
 };
