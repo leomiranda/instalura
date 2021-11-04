@@ -1,84 +1,79 @@
-# Example app with styled-components
+# Instalura
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+<p align="center">
+  <a href="https://instalura-leomiranda.vercel.app/" target="blank"><img src="./docs/print-instalura.png" width="950" alt="Instalura"></a>
+</p>
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+Project of Advanced Front-End Bootcamp from Alura using the JAMStack.
 
-## Preview
+## Technologies
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+[![Nodejs Badge](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Yarn Badge](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)](https://yarnpkg.com)
+[![React Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://pt-br.reactjs.org)
+[![Nextjs Badge](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-styled-components)
+## Resources
 
-## Deploy your own
+- [Styled components](https://styled-components.com): utilises tagged template literals to style your components.
+- [Styled normalize](https://www.npmjs.com/package/styled-normalize): CSS-normalize library for styled-components.
+- [lodash](https://lodash.com): A modern JavaScript utility library delivering modularity, performance & extras.
+- [Google Fonts](https://fonts.google.com): Making the web more beautiful, fast, and open through great typography.
+- [prop-types](https://www.npmjs.com/package/prop-types): Runtime type checking for React props and similar objects.
+- [Framer Motion](https://www.framer.com/motion/): A production-ready motion library for React.
+- [Lottie](https://github.com/crello/react-lottie): React/Typescript wrapper for awesome Airbnb's lottie-web lib.
+- [yup](https://github.com/jquense/yup): Yup is a JavaScript schema builder for value parsing and validation.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Resources for CI/CD
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+- [shelljs](https://www.npmjs.com/package/shelljs): ShellJS is a portable (Windows/Linux/OS X) implementation of Unix shell commands on top of the Node.js API.
+- [husky](https://www.npmjs.com/package/husky): Husky improves your commits and more 🐶 woof!
+- [commitizen](https://www.npmjs.com/package/commitizen): When you commit with Commitizen, you'll be prompted to fill out any required commit fields at commit time.
+- [commitlint](https://commitlint.js.org/#/): commitlint helps your team adhering to a commit convention.
+- [dependabot](https://dependabot.com): Automated dependency updates
+- [Github Actions](https://github.com/features/actions): Automate your workflow from idea to production
 
-## How to use
+## Next Features
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- Static pages generated dynamically
+- Static content
+- Navigation as SPA
+- Trailing slash as default for project pages using `next.config.js`
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
+# Run Project
+
+```
+# clone repo
+git clone <project>
+
+# install dependencies
+yarn install
+
+# run project
+yarn dev
+
+# acess page
+http://localhost:3000/
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Run online
 
-### Try it on CodeSandbox
+This project can be tested online, click on badge below:
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+[![Vercel Badge](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white&link=https://instalura-leomiranda.vercel.app/)](https://instalura-leomiranda.vercel.app/)
 
-### Notes
+## Tests
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
+- Unit tests with [Jest](https://jestjs.io/pt-BR/).
+- React Component tests with [React Testing Library](https://testing-library.com).
+- Integrations tests (End to End - E2E) with [Cypress](https://www.cypress.io).
 
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
+### Run unit tests
 
-**components/StyledLink.js**
+1. Run all at once: `yarn test`
+2. Run and watch changes (development): `yarn test:watch`
 
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+### Run integration tests
 
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
-
-**pages/index.js**
-
-```javascript
-import StyledLink from '../components/StyledLink'
-
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
-
-</details>
+1. Headless: `yarn test:integration`
+2. On cypress test suite: `yarn test:integration:open`
